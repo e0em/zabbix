@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>6.0</version>
+    <templates>
+        <template>
+            <uuid>355222b3042d4edd868bfcf6c138b5b0</uuid>
+            <template>prv SNMP</template>
+            <name>prv SNMP</name>
+            <description>Template built by SNMPWALK2ZABBIX script from https://github.com/Sean-Bradley/SNMPWALK2ZABBIX</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <items>                  
+                <item>
+                    <uuid>b1aa20160584421ba5c42945721e04a8</uuid>
+                    <name>sysDescr</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.1.1.0</snmp_oid>
+                    <key>SNMPv2-MIB.sysDescr.0</key>                    
+                    <value_type>CHAR</value_type>
+                    <description>A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>fee460a9085c449ca5c5b90230a738dd</uuid>
+                    <name>sysObjectID</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.1.2.0</snmp_oid>
+                    <key>SNMPv2-MIB.sysObjectID.0</key>                    
+                    <value_type>CHAR</value_type>
+                    <description>The vendor's authoritative identification of the network management subsystem contained in the entity. This value is allocated within the SMI enterprises subtree (1.3.6.1.4.1) and provides an easy and unambiguous means for determining `what kind of box' is being managed. For example, if vendor `Flintstones, Inc.' was assigned the subtree 1.3.6.1.4.1.424242, it could assign the identifier 1.3.6.1.4.1.424242.1.1 to its `Fred Router'.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>aba34366b9104519881ff8174c680e89</uuid>
+                    <name>sysUpTimeInstance</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.1.3.0</snmp_oid>
+                    <key>DISMAN-EVENT-MIB.sysUpTimeInstance</key>
+                    <description>DISMAN-EVENT-MIB::sysUpTimeInstance
+sysUpTimeInstance OBJECT-TYPE
+  -- FROM	DISMAN-EVENT-MIB
+::= { iso(1) org(3) dod(6) internet(1) mgmt(2) mib-2(1) system(1) sysUpTime(3) 0 }
+</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>91e5b4b4ba964f6592b361925df5ebc8</uuid>
+                    <name>sysContact</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.1.4.0</snmp_oid>
+                    <key>SNMPv2-MIB.sysContact.0</key>                    
+                    <value_type>CHAR</value_type>
+                    <description>The textual identification of the contact person for this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>bd2c2449590041e09f7da83304706b11</uuid>
+                    <name>sysName</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.1.5.0</snmp_oid>
+                    <key>SNMPv2-MIB.sysName.0</key>                    
+                    <value_type>CHAR</value_type>
+                    <description>An administratively-assigned name for this managed node. By convention, this is the node's fully-qualified domain name. If the name is unknown, the value is the zero-length string.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>9d24efbcec3b439ba2660861c67d6961</uuid>
+                    <name>sysLocation</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.1.6.0</snmp_oid>
+                    <key>SNMPv2-MIB.sysLocation.0</key>                    
+                    <value_type>CHAR</value_type>
+                    <description>The physical location of this node (e.g., 'telephone closet, 3rd floor'). If the location is unknown, the value is the zero-length string.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>cd69d8f40fd14f9cac83235990725c52</uuid>
+                    <name>sysServices</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.1.7.0</snmp_oid>
+                    <key>SNMPv2-MIB.sysServices.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>A value which indicates the set of services that this entity may potentially offer. The value is a sum. This sum initially takes the value zero. Then, for each layer, L, in the range 1 through 7, that this node performs transactions for, 2 raised to (L - 1) is added to the sum. For example, a node which performs only routing functions would have a value of 4 (2^(3-1)). In contrast, a node which is a host offering application services would have a value of 72 (2^(4-1) + 2^(7-1)). Note that in the context of the Internet suite of protocols, values should be calculated accordingly: layer functionality 1 physical (e.g., repeaters) 2 datalink/subnetwork (e.g., bridges) 3 internet (e.g., supports the IP) 4 end-to-end (e.g., supports the TCP) 7 applications (e.g., supports the SMTP) For systems including OSI protocols, layers 5 and 6 may also be counted.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>a714c58e5086421fbe337faff694f048</uuid>
+                    <name>sysORLastChange</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.1.8.0</snmp_oid>
+                    <key>SNMPv2-MIB.sysORLastChange.0</key>
+                    <description>The value of sysUpTime at the time of the most recent change in state or value of any instance of sysORID.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>29fe9f2136b34c4e824975601c665fd9</uuid>
+                    <name>ifNumber</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.2.1.0</snmp_oid>
+                    <key>IF-MIB.ifNumber.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>The number of network interfaces (regardless of their current state) present on this system.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>2aecb9672ddb440eab4b0ad24a04b4a6</uuid>
+                    <name>ipForwarding</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.4.1.0</snmp_oid>
+                    <key>IP-MIB.ipForwarding.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>The indication of whether this entity is acting as an IPv4 router in respect to the forwarding of datagrams received by, but not addressed to, this entity. IPv4 routers forward datagrams. IPv4 hosts do not (except those source-routed via the host). When this object is written, the entity should save the change to non-volatile storage and restore the object from non-volatile storage upon re-initialization of the system. Note: a stronger requirement is not used because this object was previously defined.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>519dcdb189ee40278c6c38ecf0c273a4</uuid>
+                    <name>snmpInPkts</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.1.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInPkts.0</key>
+                    <description>The total number of messages delivered to the SNMP entity from the transport service.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>96d7f1ea5579478396e1d2fe2ddc316c</uuid>
+                    <name>snmpOutPkts</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.2.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutPkts.0</key>
+                    <description>The total number of SNMP Messages which were passed from the SNMP protocol entity to the transport service.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>156f50284ee04cdaab74c9f8f12e4e40</uuid>
+                    <name>snmpInBadVersions</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.3.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInBadVersions.0</key>
+                    <description>The total number of SNMP messages which were delivered to the SNMP entity and were for an unsupported SNMP version.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>69cbfb96801b4a338458a2ef087ffe3c</uuid>
+                    <name>snmpInBadCommunityNames</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.4.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInBadCommunityNames.0</key>
+                    <description>The total number of community-based SNMP messages (for example, SNMPv1) delivered to the SNMP entity which used an SNMP community name not known to said entity. Also, implementations which authenticate community-based SNMP messages using check(s) in addition to matching the community name (for example, by also checking whether the message originated from a transport address allowed to use a specified community name) MAY include in this value the number of messages which failed the additional check(s). It is strongly RECOMMENDED that the documentation for any security model which is used to authenticate community-based SNMP messages specify the precise conditions that contribute to this value.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>10d0c3227dc74fbfbc3c6292e00930a4</uuid>
+                    <name>snmpInBadCommunityUses</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.5.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInBadCommunityUses.0</key>
+                    <description>The total number of community-based SNMP messages (for example, SNMPv1) delivered to the SNMP entity which represented an SNMP operation that was not allowed for the SNMP community named in the message. The precise conditions under which this counter is incremented (if at all) depend on how the SNMP entity implements its access control mechanism and how its applications interact with that access control mechanism. It is strongly RECOMMENDED that the documentation for any access control mechanism which is used to control access to and visibility of MIB instrumentation specify the precise conditions that contribute to this value.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>de25563e0e8b4f94bfca794f8d7b8c63</uuid>
+                    <name>snmpInASNParseErrs</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.6.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInASNParseErrs.0</key>
+                    <description>The total number of ASN.1 or BER errors encountered by the SNMP entity when decoding received SNMP messages.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>76a5aa802ed44b8483174bfb9657a548</uuid>
+                    <name>snmpInTooBigs</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.8.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInTooBigs.0</key>
+                    <description>The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `tooBig'.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>0e5b76d6d9a94ab3b5a56b8565c1cdea</uuid>
+                    <name>snmpInNoSuchNames</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.9.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInNoSuchNames.0</key>
+                    <description>The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `noSuchName'.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>b4888bab3f7e4bdb9cefc646db0b1bb1</uuid>
+                    <name>snmpInBadValues</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.10.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInBadValues.0</key>
+                    <description>The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `badValue'.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>37e8b33db41749faa2178fcd9f26d839</uuid>
+                    <name>snmpInReadOnlys</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.11.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInReadOnlys.0</key>
+                    <description>The total number valid SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `readOnly'. It should be noted that it is a protocol error to generate an SNMP PDU which contains the value `readOnly' in the error-status field, as such this object is provided as a means of detecting incorrect implementations of the SNMP.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>ebef08c265b2419cb1f9facbf0711d7c</uuid>
+                    <name>snmpInGenErrs</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.12.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInGenErrs.0</key>
+                    <description>The total number of SNMP PDUs which were delivered to the SNMP protocol entity and for which the value of the error-status field was `genErr'.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>98aade1a380448fea308781deaf8439b</uuid>
+                    <name>snmpInTotalReqVars</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.13.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInTotalReqVars.0</key>
+                    <description>The total number of MIB objects which have been retrieved successfully by the SNMP protocol entity as the result of receiving valid SNMP Get-Request and Get-Next PDUs.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>c6cd367dc3f943dba75f196ad981a26c</uuid>
+                    <name>snmpInTotalSetVars</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.14.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInTotalSetVars.0</key>
+                    <description>The total number of MIB objects which have been altered successfully by the SNMP protocol entity as the result of receiving valid SNMP Set-Request PDUs.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>f8a3c58168fa48af899ed2b0fde2d2e4</uuid>
+                    <name>snmpInGetRequests</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.15.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInGetRequests.0</key>
+                    <description>The total number of SNMP Get-Request PDUs which have been accepted and processed by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>7e72c2d0a55243f3ba4c3c31138d77d0</uuid>
+                    <name>snmpInGetNexts</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.16.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInGetNexts.0</key>
+                    <description>The total number of SNMP Get-Next PDUs which have been accepted and processed by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>bdde68a696f04845bdc613f3c7d0caf6</uuid>
+                    <name>snmpInSetRequests</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.17.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInSetRequests.0</key>
+                    <description>The total number of SNMP Set-Request PDUs which have been accepted and processed by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>8446af9e9cb9473ebecf1164e520273e</uuid>
+                    <name>snmpInGetResponses</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.18.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInGetResponses.0</key>
+                    <description>The total number of SNMP Get-Response PDUs which have been accepted and processed by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>6f5d78803b3f48b49f660d7b1ab5bd8b</uuid>
+                    <name>snmpInTraps</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.19.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpInTraps.0</key>
+                    <description>The total number of SNMP Trap PDUs which have been accepted and processed by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>8ae635d30fcd46e29b5e7a82df9c23c0</uuid>
+                    <name>snmpOutTooBigs</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.20.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutTooBigs.0</key>
+                    <description>The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status field was `tooBig.'</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>9a18509a89434e41a452e6ede1ed1e80</uuid>
+                    <name>snmpOutNoSuchNames</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.21.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutNoSuchNames.0</key>
+                    <description>The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status was `noSuchName'.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>aaa7f242078343ba8faf1261ceeba9dc</uuid>
+                    <name>snmpOutBadValues</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.22.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutBadValues.0</key>
+                    <description>The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status field was `badValue'.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>e7d003a4f4014bb2af690d66318333ad</uuid>
+                    <name>snmpOutGenErrs</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.24.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutGenErrs.0</key>
+                    <description>The total number of SNMP PDUs which were generated by the SNMP protocol entity and for which the value of the error-status field was `genErr'.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>82e40aeca23e4d108ce02042151ff384</uuid>
+                    <name>snmpOutGetRequests</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.25.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutGetRequests.0</key>
+                    <description>The total number of SNMP Get-Request PDUs which have been generated by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>18b9e950603648318b786e7fea4cf4c2</uuid>
+                    <name>snmpOutGetNexts</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.26.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutGetNexts.0</key>
+                    <description>The total number of SNMP Get-Next PDUs which have been generated by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>1e9f7ad2f09a44fbbb4cc38c32410cb9</uuid>
+                    <name>snmpOutSetRequests</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.27.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutSetRequests.0</key>
+                    <description>The total number of SNMP Set-Request PDUs which have been generated by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>3b9b0679f4444a91aca0a2704194740b</uuid>
+                    <name>snmpOutGetResponses</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.28.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutGetResponses.0</key>
+                    <description>The total number of SNMP Get-Response PDUs which have been generated by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>50820fec3c2649cf8366bd953eb07001</uuid>
+                    <name>snmpOutTraps</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.29.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpOutTraps.0</key>
+                    <description>The total number of SNMP Trap PDUs which have been generated by the SNMP protocol entity.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>82b64e871a7241488652d1f48888585e</uuid>
+                    <name>snmpEnableAuthenTraps</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.30.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpEnableAuthenTraps.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>Indicates whether the SNMP entity is permitted to generate authenticationFailure traps. The value of this object overrides any configuration information; as such, it provides a means whereby all authenticationFailure traps may be disabled. Note that it is strongly recommended that this object be stored in non-volatile memory so that it remains constant across re-initializations of the network management system.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>46e8d2cec2274b379225779be88ec3a4</uuid>
+                    <name>snmpSilentDrops</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.31.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpSilentDrops.0</key>
+                    <description>The total number of Confirmed Class PDUs (such as GetRequest-PDUs, GetNextRequest-PDUs, GetBulkRequest-PDUs, SetRequest-PDUs, and InformRequest-PDUs) delivered to the SNMP entity which were silently dropped because the size of a reply containing an alternate Response Class PDU (such as a Response-PDU) with an empty variable-bindings field was greater than either a local constraint or the maximum message size associated with the originator of the request.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>eb7039a469da4e5f88ae477be6b52a1a</uuid>
+                    <name>snmpProxyDrops</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.11.32.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpProxyDrops.0</key>
+                    <description>The total number of Confirmed Class PDUs (such as GetRequest-PDUs, GetNextRequest-PDUs, GetBulkRequest-PDUs, SetRequest-PDUs, and InformRequest-PDUs) delivered to the SNMP entity which were silently dropped because the transmission of the (possibly translated) message to a proxy target failed in a manner (other than a time-out) such that no Response Class PDU (such as a Response-PDU) could be returned.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>6da1cdd88aef42e090f9cce7841c76f3</uuid>
+                    <name>mib-2</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.47.1.4.1.0</snmp_oid>
+                    <key>SNMPv2-SMI.mib-2.47.1.4.1.0</key>
+                    <description>SNMPv2-SMI::mib-2.47.1.4.1.0
+mib-2 OBJECT-TYPE
+  -- FROM	SNMPv2-SMI
+::= { iso(1) org(3) dod(6) internet(1) mgmt(2) mib-2(1) 47 1 4 1 0 }
+</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>5aa27a56b99044ab9d6739797085766d</uuid>
+                    <name>ipv6Forwarding</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.55.1.1.0</snmp_oid>
+                    <key>IPV6-MIB.ipv6Forwarding.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>The indication of whether this entity is acting as an IPv6 router in respect to the forwarding of datagrams received by, but not addressed to, this entity. IPv6 routers forward datagrams. IPv6 hosts do not (except those source-routed via the host). Note that for some managed nodes, this object may take on only a subset of the values possible. Accordingly, it is appropriate for an agent to return a `wrongValue' response if a management station attempts to change this object to an inappropriate value.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>384b59e9eeae4604a9f104da653257f7</uuid>
+                    <name>ipv6DefaultHopLimit</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.55.1.2.0</snmp_oid>
+                    <key>IPV6-MIB.ipv6DefaultHopLimit.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>The default value inserted into the Hop Limit field of the IPv6 header of datagrams originated at this entity, whenever a Hop Limit value is not supplied by the transport layer protocol.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>9429a7b20363498c81a5c72242635e1b</uuid>
+                    <name>ipv6Interfaces</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.2.1.55.1.3.0</snmp_oid>
+                    <key>IPV6-MIB.ipv6Interfaces.0</key>
+                    <description>The number of IPv6 interfaces (regardless of their current state) present on this system.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>418aa5cbffb74320b20a13e5df8ea4d7</uuid>
+                    <name>snmpSetSerialNo</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.6.3.1.1.6.1.0</snmp_oid>
+                    <key>SNMPv2-MIB.snmpSetSerialNo.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>An advisory lock used to allow several cooperating command generator applications to coordinate their use of the SNMP set operation. This object is used for coarse-grain coordination. To achieve fine-grain coordination, one or more similar objects might be defined within each MIB group, as appropriate.</description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>0c980c83c65b4082bbf2d72e1f3bdc00</uuid>
+                    <name>snmpEngineID</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.6.3.10.2.1.1.0</snmp_oid>
+                    <key>SNMP-FRAMEWORK-MIB.snmpEngineID.0</key>                    
+                    <value_type>TEXT</value_type>
+                    <description>An SNMP engine's administratively-unique identifier. This information SHOULD be stored in non-volatile storage so that it remains constant across re-initializations of the SNMP engine. </description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>3d3f7eeb2ffc471d994c1a19e0a762ca</uuid>
+                    <name>snmpEngineBoots</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.6.3.10.2.1.2.0</snmp_oid>
+                    <key>SNMP-FRAMEWORK-MIB.snmpEngineBoots.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>The number of times that the SNMP engine has (re-)initialized itself since snmpEngineID was last configured. </description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>c782b5fcbd2d4352917b1d944e0f3a2d</uuid>
+                    <name>snmpEngineTime</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.6.3.10.2.1.3.0</snmp_oid>
+                    <key>SNMP-FRAMEWORK-MIB.snmpEngineTime.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>The number of seconds since the value of the snmpEngineBoots object last changed. When incrementing this object's value would cause it to exceed its maximum, snmpEngineBoots is incremented as if a re-initialization had occurred, and this object's value consequently reverts to zero. </description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>62b2ce431f14420b8d93a2fb0020c11d</uuid>
+                    <name>snmpEngineMaxMessageSize</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.6.3.10.2.1.4.0</snmp_oid>
+                    <key>SNMP-FRAMEWORK-MIB.snmpEngineMaxMessageSize.0</key>                    
+                    <value_type>FLOAT</value_type>
+                    <description>The maximum length in octets of an SNMP message which this SNMP engine can send or receive and process, determined as the minimum of the maximum message size values supported among all of the transports available to and supported by the engine. </description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>ee9dd98b1c994268849272d673b2b5b1</uuid>
+                    <name>snmpUnknownSecurityModels</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.6.3.11.2.1.1.0</snmp_oid>
+                    <key>SNMP-MPD-MIB.snmpUnknownSecurityModels.0</key>
+                    <description>The total number of packets received by the SNMP engine which were dropped because they referenced a securityModel that was not known to or supported by the SNMP engine. </description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>6d4ad99f5b8f482c9f65118a462d667d</uuid>
+                    <name>snmpInvalidMsgs</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.6.3.11.2.1.2.0</snmp_oid>
+                    <key>SNMP-MPD-MIB.snmpInvalidMsgs.0</key>
+                    <description>The total number of packets received by the SNMP engine which were dropped because there were invalid or inconsistent components in the SNMP message. </description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>                  
+                <item>
+                    <uuid>c2530736463547c4a558dce8ac51b1a4</uuid>
+                    <name>snmpUnknownPDUHandlers</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.6.3.11.2.1.3.0</snmp_oid>
+                    <key>SNMP-MPD-MIB.snmpUnknownPDUHandlers.0</key>
+                    <description>The total number of packets received by the SNMP engine which were dropped because the PDU contained in the packet could not be passed to an application responsible for handling the pduType, e.g. no SNMP application had registered for the proper combination of the contextEngineID and the pduType. </description>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <status>DISABLED</status>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <uuid>a4a375ebba504aa9bb20009f85b1d451</uuid>
+                    <name>sysORTable</name>
+                    <delay>3600</delay>
+                    <key>SNMPv2-MIB.sysORTable</key>
+                    <status>DISABLED</status>
+                    <type>SNMP_AGENT</type>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>164bea1c3b4146079e9e8e2f83d72ae9</uuid>
+                            <name>sysORID.{#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.2.1.1.9.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>.1.3.6.1.2.1.1.9.1.2.[{#SNMPINDEX}]</key>                    
+                            <value_type>CHAR</value_type>
+                            <delay>1h</delay>
+                            <history>7d</history>
+                            <description>An authoritative identification of a capabilities statement with respect to various MIB modules supported by the local SNMP application acting as a command responder.</description>                           
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>e5c8f6c269a8422f99b4d5dc7c095fd0</uuid>
+                            <name>sysORDescr.{#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.2.1.1.9.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>.1.3.6.1.2.1.1.9.1.3.[{#SNMPINDEX}]</key>                    
+                            <value_type>CHAR</value_type>
+                            <delay>1h</delay>
+                            <history>7d</history>
+                            <description>A textual description of the capabilities identified by the corresponding instance of sysORID.</description>                           
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>7577bda548d840228852a64d32b0dec5</uuid>
+                            <name>sysORUpTime.{#SNMPINDEX}</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.2.1.1.9.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>.1.3.6.1.2.1.1.9.1.4.[{#SNMPINDEX}]</key>
+                            <delay>1h</delay>
+                            <history>7d</history>
+                            <description>The value of sysUpTime at the time this conceptual row was last instantiated.</description>                           
+                        </item_prototype>                        
+                    </item_prototypes>
+                    <snmp_oid>discovery[{#SYSORID},.1.3.6.1.2.1.1.9.1.2,{#SYSORDESCR},.1.3.6.1.2.1.1.9.1.3,{#SYSORUPTIME},.1.3.6.1.2.1.1.9.1.4]</snmp_oid>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>
